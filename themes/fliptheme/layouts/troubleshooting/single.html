@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partialCached "head.html" . }}
+
+  <body>
+    {{ partialCached "ie_fix.html" . }}
+
+    <!-- Start Preloader 
+    ============================================= -->
+    {{ partialCached "preloader.html" . }}
+    <!-- End Preloader -->
+
+    <!-- Header 
+    ============================================= -->
+    {{ partialCached "header.html" . }}
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    {{ partialCached "troubleshooting/breadcrumb.html" . }}
+
+    <!-- End Breadcrumb -->
+
+    <!-- Star Services Details Area
+    ============================================= -->
+    {{ partialCached "troubleshooting/services.html" . }}
+    <!-- End Services Details Area -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    {{ partialCached "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    {{ partialCached "scripts.html" . }}
+  </body>
+</html>

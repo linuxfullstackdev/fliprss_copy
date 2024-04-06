@@ -1,0 +1,335 @@
+<div class="services-details-area default-padding">
+  <div class="container">
+    <div class="services-details-items">
+      <div class="row">
+        <div class="col-lg-8 pr-45 pr-md-15 pr-xs-15 services-single-content">
+          <a id="troubleshooting"
+            ><h2>Troubleshooting RSS-to-Email Campaigns</h2></a
+          >
+          <a id="rss-not-appearing"
+            ><h3>
+              Why is my RSS content not appearing in my campaign email?
+            </h3></a
+          >
+          <p>
+            If your campaign is sent successfully but there is no content, there
+            are a few potential reasons:
+          </p>
+          <ul>
+            <li>
+              <p>
+                <strong id="is-fliprss-code-present">
+                  Is the <code>mc:edit="fliprss_content"</code> attribute
+                  present in your template?
+                </strong>
+              </p>
+              <p>
+                Make sure the template contains the
+                <code>mc:edit=&quot;fliprss_content&quot;</code> attribute on
+                the element where you want your content to appear. You can check
+                by editing your template in Mailchimp and searching for the
+                attribute in the HTML.
+              </p>
+              <p>
+                You can read more about how to add this attribute to your
+                template in the
+                <a href="#design-own-template">Using your own template</a>
+                above.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="does-rss-feed-contain-content"
+                  >Do your RSS feeds contain any content?</strong
+                >
+              </p>
+              <p>
+                Check the RSS feeds to make sure they have valid, recent content
+                for the campaign.
+              </p>
+              <p>
+                Open the RSS feeds in a browser or feed reader and make sure the
+                feed is not empty.
+              </p>
+              <p>
+                If this is an existing campaign that has been successfully
+                delivering content and <strong>New items only</strong> is
+                selected for one or more feed, check that new items have been
+                added to the feed since the last campaign was sent.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="rss-unreachable"
+                  >Is the RSS feed source unreachable?</strong
+                >
+              </p>
+              <p>
+                Network issues can prevent FlipRSS from retrieving content from
+                your feeds. Check the feed source is reachable and the content
+                is available.
+              </p>
+              <p>
+                By default, FlipRSS will still send a campaign even if one or
+                more of the feeds were unavailable at the time of processing.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="subscriber-preferences">
+                  Has the subscriber been assigned the correct interest
+                  preferences in Mailchimp?
+                </strong>
+              </p>
+              <p>
+                Check the subscriber associated with the blank email in your
+                Mailchimp audience.
+              </p>
+              <p>
+                Make sure they are assigned to groups associated with the feeds
+                you expect to see in the campaign email.
+              </p>
+            </li>
+          </ul>
+          <a id="rss-to-email-not-sending"
+            ><h3>My RSS-to-Email Campaign is not sending</h3></a
+          >
+          <ul>
+            <li>
+              <p>
+                <strong id="missing-tag">
+                  Missing <code>mc:edit="fliprss_content"</code> attribute
+                </strong>
+              </p>
+              <p>
+                If the <code>mc:edit="fliprss_content"</code> attribute is
+                missing from your template, FlipRSS will not be able to insert
+                content into your campaign and it may result in an error during
+                sending.
+              </p>
+              <p>
+                Again, check Mailchimp has not removed the attribute when saving
+                your edited template.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="invalid-characters">
+                  Have you used invalid or reserved characters in Mailchimp
+                  audience group names
+                </strong>
+              </p>
+              <p>
+                Mailchimp will allow you to create groups with invalid
+                characters, but FlipRSS will not be able to send to these groups
+                due to the way Mailchimp's API works.
+              </p>
+              <p>
+                If you are experiencing issues with sending, check the names of
+                the groups you are using in your campaign and ensure they do not
+                contain any invalid characters like
+                <code>/;:'|</code>
+                etc.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="unverified-domain"
+                  >Is your sender address from an unverified domain?</strong
+                >
+              </p>
+              <p>
+                Historically, the most common reason a campaign would fail to
+                send send is that the "From email" address is not one you have
+                verified within Mailchimp. If that is the case, change it to a
+                verified address.
+              </p>
+              <p>
+                See
+                <a href="#campaign-settings-verified-email"
+                  >Use a verified email address</a
+                >
+                above for more information.
+              </p>
+              <p>
+                <strong id="compliance-state"
+                  >Is your sender email address in a compliance state?</strong
+                >
+              </p>
+              <p>
+                Email addresses can be in a compliance state if they have been
+                used to send campaigns that have been marked as spam, or if the
+                user has unsubscribed from your campaign.
+              </p>
+              <p>
+                Check your Mailchimp audience to see if the address is in a
+                compliance state.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="api-revoked"
+                  >Has your Mailchimp API key been evoked?</strong
+                >
+              </p>
+              <p>
+                If you are using an API key to integrate with Mailchimp, it is
+                possible you have revoked it within your Mailchimp account. You
+                can check this by going to the
+                <strong>"Account"</strong> section within Mailchimp, clicking on
+                the <strong>"Extras"</strong> drop-down list and selecting
+                <strong>"API keys"</strong>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong id="removed-registered-app"
+                  >Has FlipRSS been revoked as a Registered App in
+                  Mailchimp?</strong
+                >
+              </p>
+              <p>
+                If you log in to FlipRSS using Mailchimp, you can check
+                FlipRSS's access has not been revoked by going to the
+                <strong>"Account"</strong> section within Mailchimp, clicking on
+                the <strong>"Extras"</strong> drop-down list and selecting
+                <strong>"API Keys"</strong>.
+              </p>
+              <p>
+                Scroll down to <strong>"Authorised applications"</strong>
+                and you should see FlipRSS in the list.
+              </p>
+              <p>
+                If you do not see FlipRSS in the list, you will need to
+                re-authorise FlipRSS to access your Mailchimp account by logging
+                in to FlipRSS and following the instructions to connect to
+                Mailchimp.
+              </p>
+            </li>
+          </ul>
+
+          <div class="services-more mt-50">
+            <h2>What's next?</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="item">
+                  <i class="flaticon-money-management"></i>
+                  <h4><a href="demo.html">Request a demo</a></h4>
+                  <p>
+                    Get in touch to see exactly how easy it is to set up and
+                    manage automated campaigns with FlipRSS.
+                  </p>
+                  <a
+                    class="btn mt-30 circle btn-sm btn-gradient text-light"
+                    href="demo.html"
+                    >Request a demo</a
+                  >
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="item">
+                  <i class="flaticon-startup-6"></i>
+                  <h4><a href="services-details.html">Get started</a></h4>
+                  <p>
+                    Sign up for a 30 day free trial. Plenty of time to see your
+                    campaign in action before choosing a plan.
+                  </p>
+                  <a
+                    class="btn mt-30 circle btn-sm btn-gradient text-light"
+                    href="contact-us.html"
+                    >Start your free trial</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-md-50 mt-xs-50 services-sidebar">
+          <!-- Single Widget -->
+          <div class="single-widget services-list-widget">
+            <h4 class="widget-title">Quick Links</h4>
+            <div class="content">
+              <ul>
+                <li>
+                  <a href="#troubleshooting">Troubleshooting RSS-to-Email</a>
+                </li>
+                <li>
+                  <a href="#rss-not-appearing"
+                    >RSS content not appearing in email campaign</a
+                  >
+                </li>
+                <li>
+                  <a href="#is-fliprss-code-present">Is FlipRSS Code</a>
+                </li>
+                <li>
+                  <a href="#does-rss-feed-contain-content">RSS Feed content</a>
+                </li>
+                <li>
+                  <a href="#rss-unreachable">RSS Feed unreachable?</a>
+                </li>
+                <li>
+                  <a href="#subscriber-preferences">Subscriber preferences</a>
+                </li>
+                <li>
+                  <a href="#rss-to-email-not-sending"
+                    >RSS-to-Email Campaign not sending</a
+                  >
+                </li>
+                <li><a href="#missing-tag">Missing FlipRSS tag</a></li>
+                <li>
+                  <a href="#invalid-characters">Invalid characters</a>
+                </li>
+                <li>
+                  <a href="#unverified-domain">Unverified email domain</a>
+                </li>
+                <li><a href="#compliance-state">Compliance state</a></li>
+                <li><a href="#api-revoked">API revoked</a></li>
+                <li>
+                  <a href="#removed-registered-app"
+                    >Removed as registered app</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Single Widget -->
+          <div
+            class="single-widget quick-contact-widget text-light"
+            style="background-image: url('{{ "img/map.png" | relURL }}')"
+          >
+            <div class="content">
+              <h3>Need Help?</h3>
+              <p>
+                We're a small team, big on support. We don't just listen. We
+                roll up our sleeves and get stuck in to help make your email
+                campaigns the best in the industry. Any questions? Get in touch.
+              </p>
+
+              <a
+                class="btn mt-30 circle btn-sm btn-gradient"
+                href="contact-us.html"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+          <!-- Single Widget -->
+          <div class="single-widget widget-brochure">
+            <h4 class="widget-title">Guides</h4>
+            <ul>
+              <li>
+                <a href="#"><i class="fas fa-file-pdf"></i> Getting Started</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-file-pdf"></i> University Content Engine</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- End Single Widget -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

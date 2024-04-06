@@ -1,0 +1,7 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "fliptheme"
+
+[params]
+    GoogleSiteVerification = "QWZOF7Kh7JPyTQROyL-1IKlhiASEXT4wJ7WtDP6qLSM"

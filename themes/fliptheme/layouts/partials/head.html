@@ -1,0 +1,57 @@
+<head>
+  <!-- ========== Meta Tags ========== -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ========== Page Title ========== -->
+  <title>{{ .Params.Title }}</title>
+  <meta name="description" content="{{ .Params.description }}" />
+  <meta name="keywords" content="{{ .Params.keywords }}" />
+  <meta
+    name="google-site-verification"
+    content="{{ .Site.Params.GoogleSiteVerification }}"
+  />
+  <link rel="canonical" href="https://fliprss.com/" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta itemprop="name" content="{{ .Params.item_title }}" />
+  <meta itemprop="description" content="{{ .Params.item_description }}" />
+  <meta itemprop="image" content="{{ .Params.item_image }}" />
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="{{ .Params.og_url }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="og_title" />
+  <meta property="og:description" content="{{ .Params.og_description }}" />
+  <meta property="og:image" content="{{ .Params.og_image }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ .Params.twitter_title }}" />
+  <meta
+    name="twitter:description"
+    content="{{ .Params.twitter_description }}"
+  />
+  <meta name="twitter:image" content="{{ .Params.twitter_image }}" />
+
+  <!-- ========== Favicon Icon ========== -->
+  <link
+    rel="shortcut icon"
+    href='{{ "img/favicon.png" | relURL }}'
+    type="image/x-icon"
+  />
+
+  <!-- ========== Start Stylesheet ========== -->
+  <link href='{{ "css/bootstrap.min.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/font-awesome.min.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/themify-icons.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/elegant-icons.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/flaticon-set.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/magnific-popup.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/swiper-bundle.min.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/animate.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/validnavs.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/helper.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/unit-test.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/style.css" | relURL }}' rel="stylesheet" />
+  <link href='{{ "css/main.css" | relURL }}' rel="stylesheet" />
+  <!-- ========== End Stylesheet ========== -->
+</head>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partialCached "head.html" . }}
+
+  <body>
+    {{ partialCached "ie_fix.html" . }}
+
+    <!-- Start Preloader 
+    ============================================= -->
+    {{ partialCached "preloader.html" . }}
+    <!-- End Preloader -->
+
+    <!-- Header 
+    ============================================= -->
+    {{ partialCached "header.html" . }}
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    {{ partialCached "pricing/breadcrumb.html" . }}
+
+    <!-- End Breadcrumb -->
+
+    <!-- Start About 
+    ============================================= 
+    <div class="about-area circle-shape-right-bottom default-padding" style="background-image: url(img/shape/18.png);">
+        <div class="container">
+            <div class="row align-center">
+
+                <div class="col-lg-6 pr-70 pr-md-15 pr-xs-15">
+                    <div class="about-style-two">
+                        <div class="thumb">
+                            <img class="wow fadeInLeft" src="img/800x800.png" alt="Image not found">
+                            <div class="sub-item">
+                                <img class="wow fadeInDown" data-wow-delay="300ms" src="img/illustration/18.png" alt="Image not found">
+                                <img class="wow fadeInRight" data-wow-delay="500ms" src="img/illustration/19.png" alt="Image not found">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 pl-60 pl-md-15 pl-xs-15">
+                    <div class="about-style-one">
+                        <h4 class="sub-heading">Automated Email Campaigns</h4>
+                        <h2 class="heading">Personalise your emails based on subscriber preferences</h2>
+                        <p>
+                            FlipRSS leverages the power and flexibility of RSS Feeds to help you automate your email newsletter campaigns and personalise the content your subscribers receive based on their individual preferences. Not only does this incalcuable amounts of time each week, it completes a task that would just not be possible otherwise. 
+                        </p>
+                        <blockquote>
+                            FlipRSS saves an incalcuable amounts of time each week and completes a task that would just not be possible otherwise
+                        </blockquote>
+                        <a href="https://vimeo.com/video/737706330" class="popup-youtube video-play-button with-text">
+                            <div class="effect"></div>
+                            <span><i class="fas fa-play"></i> FIND OUT MORE</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    End About -->
+
+    <!-- Start Pricing 
+    ============================================= -->
+    {{ partialCached "pricing/pricing.html" . }}
+    <!-- End Pricing -->
+
+    <!-- Start Brand 
+    ============================================= -->
+    {{ partialCached "pricing/brand.html" . }}
+    <!-- End Brand -->
+
+    <!-- Start Why Choose us 
+    ============================================= -->
+    {{ partialCached "pricing/chooseus.html" . }}
+    <!-- End Why Choose Us -->
+
+    <!-- Start Testimonials 
+    ============================================= -->
+    {{ partialCached "pricing/testimonials.html" . }}
+    <!-- End Testimonials -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    {{ partialCached "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    {{ partialCached "scripts.html" . }}
+  </body>
+</html>
