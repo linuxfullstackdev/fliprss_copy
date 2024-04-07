@@ -3,6 +3,7 @@ title: "Complete guide to RSS-to-Email including multi RSS feed emails"
 date: 2024-03-27T14:10:19+05:30
 draft: false
 type: "rss-to-email"
+layout: "rss-to-email"
 description: "Everything you need to know about RSS-to-Email including personalising content and automating more than one RSS feed in email campaigns."
 keywords: "mailchimp, rss, newsletter, email marketing, schedule delivery, open rate, subscriber, engagement"
 item_title: "Complete guide to RSS-to-Email including multi RSS feed emails"

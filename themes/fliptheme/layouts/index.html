@@ -1,67 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partialCached "head.html" . }}
+  {{ partial "head.html" . }}
 
   <body>
-    {{ partialCached "ie_fix.html" . }}
+    {{ partial "ie_fix.html" . }}
 
     <!-- Start Preloader 
     ============================================= -->
-    {{ partialCached "preloader.html" . }}
+    {{ partial "preloader.html" . }}
     <!-- End Preloader -->
 
     <!-- Header 
     ============================================= -->
-    {{ partialCached "header.html" . }}
+    {{ if eq .Kind "home" }} {{ partial "header_home.html" . }} {{ else }} {{
+    partial "header.html" . }} {{ end }}
     <!-- End Header -->
 
     <!-- Start Banner Area 
     ============================================= -->
-    {{ partialCached "home/banner.html" . }}
+    {{ partial "home/banner.html" . }}
     <!-- End Banner -->
 
     <!-- Start Features 
     ============================================= -->
-    {{ partialCached "home/features.html" . }}
+    {{ partial "home/features.html" . }}
     <!-- End Features -->
 
     <!-- Start About  
     ============================================= -->
-    {{ partialCached "home/about.html" . }}
+    {{ partial "home/about.html" . }}
     <!-- End About -->
 
     <!-- Start SEO Expert
     ============================================= -->
-    {{ partialCached "home/seoexpert.html" . }}
+    {{ partial "home/seoexpert.html" . }}
     <!-- End SEO expert -->
 
     <!-- Start Testimonials 
     ============================================= -->
-    {{ partialCached "home/testimonials.html" . }}
+    {{ partial "home/testimonials.html" . }}
     <!-- End Testimonials -->
 
     <!-- Start SEO Score
     ============================================= -->
-    {{ partialCached "home/seoscore.html" . }}
+    {{ partial "home/seoscore.html" . }}
     <!-- End SEO Score -->
 
     <!-- Start Blog 
     ============================================= -->
-    {{ partialCached "home/blog.html" . }}
+    {{ partial "home/blog.html" . }}
     <!-- End Blog -->
 
     <!-- Star Services Details Area
     ============================================= -->
-    {{ partialCached "home/services.html" . }}
+    {{ partial "home/services.html" . }}
     <!-- End Services Details Area -->
 
     <!-- Start Footer 
     ============================================= -->
-    {{ partialCached "footer.html" . }}
+    {{ partial "footer.html" . }}
     <!-- End Footer -->
 
     <!-- jQuery Frameworks
     ============================================= -->
-    {{ partialCached "scripts.html" . }}
+    {{ partial "scripts.html" . }}
   </body>
 </html>

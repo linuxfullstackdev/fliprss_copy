@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partialCached "head.html" . }}
+  {{ partial "head.html" . }}
 
   <body>
-    {{ partialCached "ie_fix.html" . }}
+    {{ partial "ie_fix.html" . }}
 
     <!-- Start Preloader 
     ============================================= -->
-    {{ partialCached "preloader.html" . }}
+    {{ partial "preloader.html" . }}
     <!-- End Preloader -->
 
     <!-- Header 
     ============================================= -->
-    {{ partialCached "header.html" . }}
+    {{ partial "header.html" . }}
     <!-- End Header -->
 
     <!-- Start Breadcrumb 
     ============================================= -->
-    {{ partialCached "pricing/breadcrumb.html" . }}
+    {{ partial "author/breadcrumb.html" . }}
 
     <!-- End Breadcrumb -->
 
@@ -63,31 +63,31 @@
 
     <!-- Start Pricing 
     ============================================= -->
-    {{ partialCached "pricing/pricing.html" . }}
+    {{ partial "pricing/pricing.html" . }}
     <!-- End Pricing -->
 
     <!-- Start Brand 
     ============================================= -->
-    {{ partialCached "pricing/brand.html" . }}
+    {{ partial "pricing/brand.html" . }}
     <!-- End Brand -->
 
     <!-- Start Why Choose us 
     ============================================= -->
-    {{ partialCached "pricing/chooseus.html" . }}
+    {{ partial "pricing/chooseus.html" . }}
     <!-- End Why Choose Us -->
 
     <!-- Start Testimonials 
     ============================================= -->
-    {{ partialCached "pricing/testimonials.html" . }}
+    {{ partial "pricing/testimonials.html" . }}
     <!-- End Testimonials -->
 
     <!-- Start Footer 
     ============================================= -->
-    {{ partialCached "footer.html" . }}
+    {{ partial "footer.html" . }}
     <!-- End Footer -->
 
     <!-- jQuery Frameworks
     ============================================= -->
-    {{ partialCached "scripts.html" . }}
+    {{ partial "scripts.html" . }}
   </body>
 </html>

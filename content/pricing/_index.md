@@ -3,6 +3,7 @@ title: "FlipRSS pricing for multi RSS emails"
 date: 2024-03-27T14:10:14+05:30
 draft: false
 type: "pricing"
+layout: "pricing"
 description: "Pricing for individuals, charities and educational institutions | FlipRSS"
 keywords: "mailchimp, rss, newsletter, email marketing, schedule delivery, open rate, subscriber, engagement"
 item_title: "Personalised newsletters without the hassle"

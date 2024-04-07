@@ -1,7 +1,14 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://fliprss.com/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "fliptheme"
+paginate = 2
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  author = 'authors'
 
 [params]
     GoogleSiteVerification = "QWZOF7Kh7JPyTQROyL-1IKlhiASEXT4wJ7WtDP6qLSM"
+

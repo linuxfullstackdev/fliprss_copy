@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    <!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+    <!-- Start Preloader 
+    ============================================= -->
+    {{ partial "preloader.html" . }}
+    <!-- End Preloader -->
+
+    <!-- Header 
+    ============================================= -->
+    {{ partial "header.html" . }}
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    {{ partial "author/breadcrumb.html" . }}
+    <!-- End Breadcrumb -->
+
+    <!-- Start Blog 
+    ============================================= -->
+    <div class="blog-area blog-grid default-padding">
+      <div class="container">
+        <div class="blog-item-box">
+          <div class="row">
+            {{ range .Paginator.Pages }}
+            <!-- Single Item -->
+            <div class="col-xl-6 col-md-6 single-item">
+              <div class="item">
+                <div class="thumb">
+                  <a href="{{ .Permalink }}"
+                    ><img src='{{ "img/800x600.png" | relURL }}' alt="Thumb"
+                  /></a>
+                  <div class="tags">
+                    <a href="#">{{ .Params.Category }}</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <h2>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                  </h2>
+                  <p>
+                    Seeing rather her you not esteem men settle genius excuse.
+                    Deal say over you age from. Comparison new ham melancholy
+                    son themselves improved out sociabl.
+                  </p>
+                  <div class="author-meta">
+                    <div class="thumbs">
+                      <a href="/authors{{ .Params.author | relURL }}"
+                        ><img
+                          src='{{ "img/800x800.png" | relURL }}'
+                          alt="Author"
+                      /></a>
+                    </div>
+                    <div class="meta-info">
+                      <h5>{{ .Params.author | humanize }}</h5>
+                      <span>{{ .Date.Format "2 January, 2006" }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Single Item -->
+            {{end}}
+          </div>
+        </div>
+        <!-- Pagination -->
+        {{ partial "pagination.html" . }}
+        <!-- End Pagination -->
+      </div>
+    </div>
+    <!-- End Blog -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    {{ partial "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

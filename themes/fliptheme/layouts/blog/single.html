@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "ie_fix.html" . }}
+
+    <!-- Start Preloader 
+    ============================================= -->
+    {{ partial "preloader.html" . }}
+    <!-- End Preloader -->
+
+    <!-- Header 
+    ============================================= -->
+    {{ partial "header.html" . }}
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb 
+    ============================================= -->
+    {{ partial "author/breadcrumb.html" . }}
+    <!-- End Breadcrumb -->
+
+    <!-- Start Blog
+    ============================================= -->
+    <div class="blog-area single full-blog full-blog default-padding">
+      <div class="container">
+        <div class="blog-items">
+          <div class="row">
+            <div
+              class="blog-content wow fadeInUp col-lg-10 offset-lg-1 col-md-12"
+            >
+              <div class="blog-style-two item">
+                <div class="blog-item-box">
+                  {{ if .Params.featured_image }}
+                  <div class="thumb">
+                    <a href="{{ .Permalink }}"
+                      ><img src="{{ .Params.featured_image }}" alt="Thumb"
+                    /></a>
+                  </div>
+                  {{ end }}
+                  <div class="info">
+                    <div class="meta">
+                      <ul>
+                        <li>
+                          <a href="#"
+                            ><i class="fas fa-calendar-alt"></i>{{ .Date.Format "2 January, 2006" }}</a
+                          >
+                        </li>
+                        <li>
+                          <a href="/authors{{ .Params.author | relURL }}"
+                            ><i class="fas fa-user-circle"></i>{{ .Params.author | humanize
+                            }}</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    {{ .Content }}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Post Tags Share -->
+
+              <div class="post-tags share">
+                <div class="tags">
+                  <h4>Tags:</h4>
+
+                  {{ $tags := .Params.tags }} {{ range $name, $items :=
+                  .Site.Taxonomies.tags }} {{ if in $tags $name }}
+                  <a
+                    href="{{ $.Site.BaseURL }}tags/{{ $name | urlize | lower }}/"
+                    >{{ $name }} - {{ len $items }}</a
+                  >{{ end }} {{ end }}
+                </div>
+              </div>
+              <!-- Post Tags Share -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Blog -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    {{ partial "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  {{ partialCached "head.html" . }}
+  {{ partial "head.html" . }}
 
   <body>
-    {{ partialCached "ie_fix.html" . }}
+    {{ partial "ie_fix.html" . }}
 
     <!-- Header 
     ============================================= -->
-    {{ partialCached "header.html" . }}
+    {{ partial "header.html" . }}
     <!-- End Header -->
 
     <!-- Start Breadcrumb 
     ============================================= -->
-    {{ partialCached "contact/breadcrumb.html" . }}
+    {{ partial "author/breadcrumb.html" . }}
 
     <!-- End Breadcrumb -->
 
     <!-- Start Contact Us 
     ============================================= -->
-    {{ partialCached "contact/contact.html" . }}
+    {{ partial "contact/contact.html" . }}
     <!-- End Contact -->
 
     <!-- Start Footer 
     ============================================= -->
-    {{ partialCached "footer.html" . }}
+    {{ partial "footer.html" . }}
     <!-- End Footer -->
 
     <!-- jQuery Frameworks
     ============================================= -->
-    {{ partialCached "scripts.html" . }}
+    {{ partial "scripts.html" . }}
   </body>
 </html>

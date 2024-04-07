@@ -1,7 +1,7 @@
 /* ===================================================================
     
     Author          : Valid Theme
-    Template Name   : Digalu - Digital Marketing Agency Template
+    Template Name   : Digalu - Digital Marketing Agency Templatexxx
     Version         : 1.0
     
 * ================================================================= */

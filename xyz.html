@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+
+  <body>
+    {{ partial "ie_fix.html" . }}
+
+    <!-- Start Preloader 
+    ============================================= -->
+    {{ partial "preloader.html" . }}
+    <!-- End Preloader -->
+
+    <!-- Header 
+    ============================================= -->
+    {{ if eq .Kind "home" }} {{ partial "header_home.html" . }} {{ else }} {{
+    partial "header.html" . }} {{ end }}
+    <!-- End Header -->
+
+    <!-- Start Blog 
+    ============================================= -->
+    {{ partial "taxonomy.html" . }}
+    <!-- End Blog -->
+
+    <!-- Start Footer 
+    ============================================= -->
+    {{ partial "footer.html" . }}
+    <!-- End Footer -->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    {{ partial "scripts.html" . }}
+  </body>
+</html>

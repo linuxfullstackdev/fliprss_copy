@@ -1,8 +1,9 @@
 ---
-title: "Request a demo of FlipRSS, multi RSS-to-Email solution"
-date: 2024-03-27T14:09:54+05:30
+title: "Contact the team at FlipRSS, we're here to help."
+date: 2024-03-27T14:09:47+05:30
 draft: false
-type: "demo"
+type: "contact"
+layout: "contact"
 description: "Digalu - Digital Marketing Agency Template"
 keywords: ""
 item_title: ""

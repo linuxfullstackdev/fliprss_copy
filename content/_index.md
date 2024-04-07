@@ -2,6 +2,7 @@
 title: "FlipRSS | The ultimate RSS-to-Email solution for multiple feeds"
 date: 2024-03-27T14:09:47+05:30
 draft: false
+type: "home"
 description: "FlipRSS integrates with Mailchimp to deliver personalized RSS-powered email newsletters to your subscribers."
 keywords: "mailchimp, rss, newsletter, email marketing, schedule delivery, open rate, subscriber, engagement"
 item_title: "Personalised newsletters without the hassle"

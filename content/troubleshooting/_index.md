@@ -3,6 +3,7 @@ title: "FlipRSS Help and guide to getting started with rss-to-email"
 date: 2024-03-27T14:10:27+05:30
 draft: false
 type: "troubleshooting"
+layout: "troubleshooting"
 description: "FlipRSS integrates with Mailchimp to deliver personalized RSS-powered email newsletters to your subscribers."
 keywords: "mailchimp, rss, newsletter, email marketing, schedule delivery, open rate, subscriber, engagement"
 item_title: "FlipRSS Help and guide to getting started with rss-to-email"
