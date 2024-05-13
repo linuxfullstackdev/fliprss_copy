@@ -9,9 +9,7 @@
         <div class="input-group">
           <span class="input-group-addon"><i class="fa fa-search"></i></span>
           <input type="text" class="form-control" placeholder="Search" />
-          <span class="input-group-addon close-search"
-            ><i class="fa fa-times"></i
-          ></span>
+          <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
         </div>
       </div>
     </div>
@@ -71,11 +69,11 @@
                           <a href="/rss-to-email">RSS-to-Email</a>
                         </li>
                         <li>
-                          <a href="/services-2">Mastering Mailchimp Groups</a>
+                          <a href="/mastering-email-marketing">Mastering Email Marketing</a>
                         </li>
-                        <li>
+                        {{/*  <li>
                           <a href="/services-3">Create a Content Engine</a>
-                        </li>
+                        </li>  */}}
                       </ul>
                     </div>
                   </div>
@@ -122,11 +120,19 @@
             data-in="fadeInDown"
             data-out="fadeOutUp"
           >
-            <li>
+            {{/*  <li>
               <a class="btn-light animation" href="/demo"
                 >Request a demo <i class="fa fa-paper-plane"></i
               ></a>
-            </li>
+            </li>  */}}
+
+            <li>
+              <!-- Calendly link widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fliprss/demo?hide_gdpr_banner=1'});return false;" class="btn-light animation">Request a Demo <i class="fa fa-paper-plane"></i
+              ></a></li>
+<!-- Calendly link widget end -->
             <!--<li class="search"><a href="#"><i class="far fa-search"></i></a></li>-->
             <!--<li class="side-menu">
                               <a href="#">

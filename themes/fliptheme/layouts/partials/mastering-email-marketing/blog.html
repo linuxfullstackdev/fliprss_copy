@@ -1,0 +1,82 @@
+<div class="blog-area blog-grid default-padding bottom-less"
+    style="background-image: url({{ "img/shape/28.png" | relURL }})">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="site-heading text-center">
+                    <h4 class="sub-title">Mastering Email Marketing Blog Series</h4>
+                    <p class="title">We're releasing the series section-by-section, every week. Follow us for the latest
+                        issue
+                        or, if you can't wait, <a href="#download">download the complete guide now for free</a>.</p>
+                    <div class="devider"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            {{/*  {{ $posts := where .Site.RegularPages "Section" "blog" }}
+            {{ $latestPosts := slice }}
+            {{ range first 3 (sort $posts ".Date" "desc") }}
+                {{ $latestPosts = $latestPosts | append . }}
+            {{ end }}  */}}
+
+            {{ $mytag := "email automation" }}
+            
+            {{ range first 3 (where (index .Site.Taxonomies.tags $mytag).Pages "Section" "blog") }}
+
+            
+                <div class="col-lg-4 col-md-6 single-item">
+                    <div class="item">
+                        <div class="thumb">
+
+                            {{ if .Params.featured_image }}
+                            <a href="{{ .RelPermalink }}">
+                                <img src='{{ .Params.featured_image }}' alt="Thumb"/>
+                            </a>
+                            {{ else }}
+                            <a href="{{ .RelPermalink }}">
+                                <img src='{{ "img/800x600.png" | relURL }}' alt="Thumb"/>
+                            </a>
+                            {{ end }}
+
+                            <div class="tags">
+                                <a href="{{ $.Site.BaseURL }}tags/{{ index .Params.tags 0 | urlize | lower }}/">{{ index .Params.tags 0 }}</a>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="meta">
+                                <ul>
+                                    <li>
+                                        <a href="{{ .RelPermalink }}"><i
+                                                class="far fa-calendar-alt"></i>{{ .Date.Format "2 January, 2006" }}</a>
+                                    </li>
+                                    <li>
+                                        <a href="/authors{{ .Params.author | relURL }}"><i
+                                                class="far fa-user-circle"></i>{{ .Params.author }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h4>
+                            <a href="/blog/unlocking-audience-engagement-for-youtubers-and-podcasters/"
+                                class="button-regular">
+                                Continue Reading <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+
+
+
+            
+
+
+
+
+        </div>
+    </div>
+</div>

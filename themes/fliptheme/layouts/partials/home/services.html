@@ -303,9 +303,12 @@
                   campaigns, please get in touch.
                 </p>
 
-                <a class="btn mt-30 circle btn-sm btn-gradient" href="demo.html"
+                {{/*  <a class="btn mt-30 circle btn-sm btn-gradient" href="demo.html"
                   >Request a Demo</a
-                >
+                >  */}}
+                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fliprss/demo?hide_gdpr_banner=1'});return false;" class="btn mt-30 circle btn-sm btn-gradient">Book a Demo</a>
               </div>
             </div>
             <!-- Single Widget -->
@@ -313,7 +316,7 @@
               <h4 class="widget-title">Quick Links</h4>
               <ul>
                 <li>
-                  <a href="demo.html"
+                  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/fliprss/demo?hide_gdpr_banner=1'});return false;"
                     ><i class="fas fa-link"></i> Request a Demo</a
                   >
                 </li>

@@ -1,6 +1,6 @@
 ---
-title: "Beyond The Click: Re-imagining Digital Marketing Engagement with FlipRSS"
-date: 2024-03-06T20:34:28+05:30
+title: "Email Blog 2"
+date: 2024-05-11T20:34:28+05:30
 draft: false
 author: "bruce-banner"
 featured_image: "/img/1500x800.png"
